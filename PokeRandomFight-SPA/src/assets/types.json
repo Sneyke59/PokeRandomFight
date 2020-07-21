@@ -1,0 +1,34 @@
+[
+    {
+        "name": "fire",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Feu_LGPE.png"
+    },
+    {
+        "name": "water",
+        "url": "https://www.pokepedia.fr/images/7/74/Miniature_Type_Eau_LGPE.png"
+    },
+    {
+        "name": "rock",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Roche_LGPE.png"
+    },
+    {
+        "name": "ground",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Sol_LGPE.png"
+    },
+    {
+        "name": "insect",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Sol_LGPE.png"
+    },
+    {
+        "name": "plant",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Plante_LGPE.png"
+    },
+    {
+        "name": "ice",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Glace_LGPE.png"
+    },
+    {
+        "name": "dragon",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Dragon_LGPE.png"
+    }
+]

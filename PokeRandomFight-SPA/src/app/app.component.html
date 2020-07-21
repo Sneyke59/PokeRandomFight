@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>{{pokemon?.name | titlecase}}</p>
+      <img src="{{pokemon?.sprites.frontDefault}}" alt="{{pokemon?.name}}">
+      <p *ngFor="let type of pokemon?.types">{{type.type.name}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let stat of pokemon?.stats">
+              <td>{{stat.stat.name}}</td>
+              <td>{{stat.baseStat}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-primary" (click)="getRandom()">Get Random Pokemon</button>
+    </div>
+  </div>
+
+</div>
