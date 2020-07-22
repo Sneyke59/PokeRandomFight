@@ -4,4 +4,5 @@ export interface TypeLink {
         name: string;
         url: string;
     };
+    img: string;
 }

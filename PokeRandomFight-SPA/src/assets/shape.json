@@ -1,0 +1,58 @@
+[
+    {
+        "name": "ball",
+        "url": "https://cdn.bulbagarden.net/upload/1/17/Body01.png"
+    },
+    {
+        "name": "squiggle",
+        "url": "https://cdn.bulbagarden.net/upload/7/7a/Body02.png"
+    },
+    {
+        "name": "fish",
+        "url": "https://cdn.bulbagarden.net/upload/d/d3/Body03.png"
+    },
+    {
+        "name": "arms",
+        "url": "https://cdn.bulbagarden.net/upload/2/2c/Body04.png"
+    },
+    {
+        "name": "blob",
+        "url": "https://cdn.bulbagarden.net/upload/d/da/Body05.png"
+    },
+    {
+        "name": "upright",
+        "url": "https://cdn.bulbagarden.net/upload/8/88/Body06.png"
+    },
+    {
+        "name": "legs",
+        "url": "https://cdn.bulbagarden.net/upload/b/bc/Body07.png"
+    },
+    {
+        "name": "quadruped",
+        "url": "https://cdn.bulbagarden.net/upload/c/cc/Body08.png"
+    },
+    {
+        "name": "wings",
+        "url": "https://cdn.bulbagarden.net/upload/9/98/Body09.png"
+    },
+    {
+        "name": "tentacles",
+        "url": "https://cdn.bulbagarden.net/upload/9/97/Body10.png"
+    },
+    {
+        "name": "heads",
+        "url": "https://cdn.bulbagarden.net/upload/3/36/Body11.png"
+    },
+    {
+        "name": "humanoid",
+        "url": "https://cdn.bulbagarden.net/upload/4/45/Body12.png"
+    },
+    {
+        "name": "bug-wings",
+        "url": "https://cdn.bulbagarden.net/upload/0/09/Body13.png"
+    },
+    {
+        "name": "armor",
+        "url": "https://cdn.bulbagarden.net/upload/4/4b/Body14.png"
+    }
+]

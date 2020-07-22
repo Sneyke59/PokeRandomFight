@@ -1,34 +1,74 @@
 [
     {
-        "name": "fire",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Feu_LGPE.png"
+        "name": "normal",
+        "url": "https://www.pokepedia.fr/images/0/02/Miniature_Type_Normal_LGPE.png"
     },
     {
         "name": "water",
         "url": "https://www.pokepedia.fr/images/7/74/Miniature_Type_Eau_LGPE.png"
     },
     {
-        "name": "rock",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Roche_LGPE.png"
+        "name": "electric",
+        "url": "https://www.pokepedia.fr/images/0/07/Miniature_Type_Électrik_LGPE.png"
+    },
+    {
+        "name": "fighting",
+        "url": "https://www.pokepedia.fr/images/a/a6/Miniature_Type_Combat_LGPE.png"
     },
     {
         "name": "ground",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Sol_LGPE.png"
+        "url": "https://www.pokepedia.fr/images/b/b4/Miniature_Type_Sol_LGPE.png"
     },
     {
-        "name": "insect",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Sol_LGPE.png"
+        "name": "psychic",
+        "url": "https://www.pokepedia.fr/images/5/55/Miniature_Type_Psy_LGPE.png"
     },
     {
-        "name": "plant",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Plante_LGPE.png"
+        "name": "rock",
+        "url": "https://www.pokepedia.fr/images/7/7b/Miniature_Type_Roche_LGPE.png"
+    },
+    {
+        "name": "dark",
+        "url": "https://www.pokepedia.fr/images/4/4f/Miniature_Type_Ténèbres_LGPE.png"
+    },
+    {
+        "name": "steel",
+        "url": "https://www.pokepedia.fr/images/e/ea/Miniature_Type_Acier_LGPE.png"
+    },
+    {
+        "name": "fire",
+        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Feu_LGPE.png"
+    },
+    {
+        "name": "grass",
+        "url": "https://www.pokepedia.fr/images/2/2f/Miniature_Type_Plante_LGPE.png"
     },
     {
         "name": "ice",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Glace_LGPE.png"
+        "url": "https://www.pokepedia.fr/images/f/f3/Miniature_Type_Glace_LGPE.png"
+    },
+    {
+        "name": "poison",
+        "url": "https://www.pokepedia.fr/images/5/51/Miniature_Type_Poison_LGPE.png"
+    },
+    {
+        "name": "flying",
+        "url": "https://www.pokepedia.fr/images/a/ab/Miniature_Type_Vol_LGPE.png"
+    },
+    {
+        "name": "bug",
+        "url": "https://www.pokepedia.fr/images/7/73/Miniature_Type_Insecte_LGPE.png"
+    },
+    {
+        "name": "ghost",
+        "url": "https://www.pokepedia.fr/images/4/4a/Miniature_Type_Spectre_LGPE.png"
     },
     {
         "name": "dragon",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Dragon_LGPE.png"
+        "url": "https://www.pokepedia.fr/images/b/bd/Miniature_Type_Dragon_LGPE.png"
+    },
+    {
+        "name": "fairy",
+        "url": "https://www.pokepedia.fr/images/7/76/Miniature_Type_Fée_LGPE.png"
     }
 ]
