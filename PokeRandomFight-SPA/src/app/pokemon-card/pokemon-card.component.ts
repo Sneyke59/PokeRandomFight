@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Pokemon } from '../_models/Pokemon';
 import Vibrant from 'node-vibrant';
 import { Palette } from 'node-vibrant/lib/color';
@@ -23,6 +23,15 @@ export class PokemonCardComponent implements OnInit {
   @Input() pokemonLoading: boolean;
   @Input() specyLoading: boolean;
   @Input() shapesLoading: boolean;
+
+  @ViewChild('desc', { static: true }) desc: ElementRef;
+
+  getBottomHeight(): string {
+    const height: number = +this.desc.nativeElement.offsetHeight;
+
+    return (height + 4) + 'px';
+  }
+
 
   constructor() { }
 

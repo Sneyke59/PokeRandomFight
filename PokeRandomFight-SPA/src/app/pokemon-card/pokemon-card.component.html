@@ -1,7 +1,7 @@
 <div class="card">
   <div class="banner" [ngStyle]="{'background-color': palette?.Vibrant.hex}">
-    <img src="{{pokemon?.sprites.frontDefault}}" [ngStyle]="{'background-color': palette?.DarkVibrant.hex}"
-      *ngIf="!pokemonLoading">
+    <img src="{{pokemon?.sprites.frontDefault}}" class="current"
+      [ngStyle]="{'background-color': palette?.DarkVibrant.hex}" *ngIf="!pokemonLoading">
     <div class="loader d-flex justify-content-center align-items-center"
       [ngStyle]="{'background-color': palette?.Vibrant.hex}" *ngIf="pokemonLoading">
       <div class="spinner-border text-dark" role="status">
@@ -19,7 +19,7 @@
     </div>
   </div>
   <h2 *ngIf="!specyLoading" class="name" [ngStyle]="{'color': palette?.Vibrant.hex}">
-    {{(specy ? getNameLang() : 'None') | titlecase}}</h2>
+    {{(specy ? getNameLang() +' ('+pokemon.id+')' : 'None') | titlecase}}</h2>
   <div *ngIf="specyLoading" class="gooey">
     <span class="dot" [ngStyle]="{'background-color': palette?.Vibrant.hex}"></span>
     <div class="dots">
@@ -29,48 +29,50 @@
     </div>
   </div>
   <div class="title">{{specy ? getGenera() : ''}}</div>
-  <div class="d-flex align-items-center justify-content-center mb-2 mt-2">
+  <div class="d-flex align-items-center mb-2 mt-2" style="width: 100%; justify-content: space-evenly;">
     <img *ngFor="let type of pokemon?.types" src="{{type.img}}" alt="">
   </div>
   <div class="actions">
     <div class="follow-info">
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[0].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(0) : ''}}</small>
         </a>
       </h2>
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[1].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(1) : ''}}</small>
         </a>
       </h2>
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[2].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(2) : ''}}</small>
         </a>
       </h2>
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[3].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(3) : ''}}</small>
         </a>
       </h2>
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[4].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(4) : ''}}</small>
         </a>
       </h2>
       <h2>
-        <a href="#">
+        <a>
           <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[5].baseStat : '0'}}</span>
           <small>{{statsDatas ? getStat(5) : ''}}</small>
         </a>
       </h2>
     </div>
   </div>
-  <div class="desc">{{specy ? getFlavor() : ''}}</div>
+  <div #desc class="desc">{{specy ? getFlavor() : ''}}</div>
+  <div class="bottomBanner" [ngStyle]="{'background-color': palette?.Vibrant.hex, 'height': getBottomHeight()}">
+  </div>
 </div>
