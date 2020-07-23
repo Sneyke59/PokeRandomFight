@@ -6,13 +6,29 @@ import { Specy } from '../_models/Specy';
 import { Stats } from 'fs';
 import { Stat } from '../_models/Stat';
 import { Shape } from '../_models/Shape';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
-  styleUrls: ['./pokemon-card.component.scss']
+  styleUrls: ['./pokemon-card.component.scss'],
+  animations: [
+    trigger('switching', [
+      state('default', style({
+        'max-height': 'auto'
+      })),
+      state('close', style({
+        'max-height': '200px',
+        height: '200px'
+      })),
+      transition('* => *', [
+        animate('100ms ease')
+      ])
+    ])
+  ]
 })
 export class PokemonCardComponent implements OnInit {
+  switchingState: string = 'default';
 
   @Input() pokemon: Pokemon;
   @Input() palette: Palette;
@@ -69,4 +85,6 @@ export class PokemonCardComponent implements OnInit {
   getNameLang() {
     return this.specy.names.find(x => x.language.name === 'fr').name;
   }
+
+  isLoading = () => this.pokemonLoading || this.shapesLoading || this.specyLoading;
 }

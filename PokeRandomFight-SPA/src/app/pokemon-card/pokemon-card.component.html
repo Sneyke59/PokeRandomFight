@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="banner" [ngStyle]="{'background-color': palette?.Vibrant.hex}">
+  <div class="banner" [ngStyle]="{'background-color': palette?.Vibrant.hex}" style="--col:{{palette?.Vibrant.hex}}">
     <img src="{{pokemon?.sprites.frontDefault}}" class="current"
       [ngStyle]="{'background-color': palette?.DarkVibrant.hex}" *ngIf="!pokemonLoading">
     <div class="loader d-flex justify-content-center align-items-center"
@@ -76,8 +76,9 @@
     </div>
   </div>
   <div class="descContainer">
-    <div #desc class="desc">{{specy ? getFlavor() : ''}}</div>
-    <div class="bottomBanner" [ngStyle]="{'background-color': palette?.Vibrant.hex, 'height': getBottomHeight()}"
+    <div #desc class="desc" style="font-weight: 700;" [ngStyle]="{'color': '#fff'}">{{specy ? getFlavor() : ''}}</div>
+    <div class="bottomBanner"
+      [ngStyle]="{'background-color': palette?.Vibrant.hex, 'height': isLoading() ? '700px' : getBottomHeight()}"
       style="--col:{{palette?.Vibrant.hex}}">
     </div>
   </div>
