@@ -8,6 +8,7 @@ import { Stats } from 'fs';
 import { Stat } from './_models/Stat';
 import { ShapeLink } from './_models/ShapeLink';
 import { Shape } from './_models/Shape';
+import { Nature } from './_models/Nature';
 
 @Component({
   selector: 'app-root',
@@ -20,10 +21,12 @@ export class AppComponent implements OnInit {
   pokemonLoading = false;
   specyLoading = false;
   shapesLoading = false;
+  naturesLoading = false;
   palette: Palette;
   specy: Specy;
   statsDatas: Stat[];
   shapesDatas: Shape[];
+  naturesDatas: Nature[];
 
   constructor(private pokemonServ: PokemonService) { }
 
@@ -32,18 +35,59 @@ export class AppComponent implements OnInit {
 
     this.getStatsData();
     this.getShapesData();
+    this.getNaturesData();
   }
+
+  getNaturesData() {
+    this.naturesLoading = true;
+
+    const natures: Nature[] = JSON.parse(localStorage.getItem('natures'));
+
+    if (natures != null) {
+      this.naturesDatas = natures;
+      this.naturesLoading = false;
+
+      return;
+    }
+
+    this.pokemonServ.getNaturesDatas().subscribe(response => {
+      this.naturesDatas = response;
+      localStorage.setItem('natures', JSON.stringify(this.naturesDatas));
+      this.naturesLoading = false;
+    });
+  }
+
   getShapesData() {
     this.shapesLoading = true;
+
+    const shapes: Shape[] = JSON.parse(localStorage.getItem('shapes'));
+
+    if (shapes != null) {
+      this.shapesDatas = shapes;
+      this.shapesLoading = false;
+
+      return;
+    }
+
     this.pokemonServ.getShapesDatas().subscribe(response => {
       this.shapesDatas = response;
+      localStorage.setItem('shapes', JSON.stringify(this.shapesDatas));
       this.shapesLoading = false;
     });
   }
 
   getStatsData() {
+
+    const stats: Stat[] = JSON.parse(localStorage.getItem('stats'));
+
+    if (stats != null) {
+      this.statsDatas = stats;
+      return;
+    }
+
     this.pokemonServ.getStatsDatas().subscribe(response => {
       this.statsDatas = response;
+      localStorage.setItem('stats', JSON.stringify(this.statsDatas));
     });
   }
 

@@ -9,6 +9,7 @@ import { Specy } from '../_models/Specy';
 import { Stat } from '../_models/Stat';
 import { ShapeLink } from '../_models/ShapeLink';
 import { Shape } from '../_models/Shape';
+import { Nature } from '../_models/Nature';
 
 @Injectable({
   providedIn: 'root'
@@ -54,5 +55,9 @@ export class PokemonService {
 
   getShapesDatas() {
     return this.http.get<Shape[]>(this.baseUrl + 'shapes');
+  }
+
+  getNaturesDatas() {
+    return this.http.get<Nature[]>(this.baseUrl + 'natures');
   }
 }
