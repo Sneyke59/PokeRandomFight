@@ -1,74 +1,92 @@
 [
     {
         "name": "normal",
-        "url": "https://www.pokepedia.fr/images/0/02/Miniature_Type_Normal_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/f/fb/Normal.png/revision/latest/scale-to-width-down/64?cb=20161013132914",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/f/f6/Type_Background_Normal.png/revision/latest/scale-to-width-down/150?cb=20171026003751"
     },
     {
         "name": "water",
-        "url": "https://www.pokepedia.fr/images/7/74/Miniature_Type_Eau_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/9/9d/Water.png/revision/latest/scale-to-width-down/64?cb=20161013133222",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/d/d2/Type_Background_Water.png/revision/latest/scale-to-width-down/150?cb=20171026003849"
     },
     {
         "name": "electric",
-        "url": "https://www.pokepedia.fr/images/0/07/Miniature_Type_Électrik_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/2/2f/Electric.png/revision/latest/scale-to-width-down/64?cb=20161013132813",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/6/6c/Type_Background_Electric.png/revision/latest/scale-to-width-down/150?cb=20171026003611"
     },
     {
         "name": "fighting",
-        "url": "https://www.pokepedia.fr/images/a/a6/Miniature_Type_Combat_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/3/30/Fighting.png/revision/latest/scale-to-width-down/64?cb=20161013132827",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/1/17/Type_Background_Fighting.png/revision/latest/scale-to-width-down/150?cb=20171026003644"
     },
     {
         "name": "ground",
-        "url": "https://www.pokepedia.fr/images/b/b4/Miniature_Type_Sol_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/8/8f/Ground.png/revision/latest/scale-to-width-down/64?cb=20161013132902",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/a/a3/Type_Background_Ground.png/revision/latest/scale-to-width-down/150?cb=20171026003731"
     },
     {
         "name": "psychic",
-        "url": "https://www.pokepedia.fr/images/5/55/Miniature_Type_Psy_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/2/21/Psychic.png/revision/latest/scale-to-width-down/64?cb=20161013133006",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/f/f8/Type_Background_Psychic.png/revision/latest/scale-to-width-down/150?cb=20171026003814"
     },
     {
         "name": "rock",
-        "url": "https://www.pokepedia.fr/images/7/7b/Miniature_Type_Roche_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/0/0b/Rock.png/revision/latest/scale-to-width-down/64?cb=20161013133022",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/5/5d/Type_Background_Rock.png/revision/latest/scale-to-width-down/150?cb=20171026003823"
     },
     {
         "name": "dark",
-        "url": "https://www.pokepedia.fr/images/4/4f/Miniature_Type_Ténèbres_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/0/0e/Dark.png/revision/latest/scale-to-width-down/64?cb=20161013132800",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/f/f5/Type_Background_Dark.png/revision/latest/scale-to-width-down/150?cb=20171026003554"
     },
     {
         "name": "steel",
-        "url": "https://www.pokepedia.fr/images/e/ea/Miniature_Type_Acier_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/c/c9/Steel.png/revision/latest/scale-to-width-down/64?cb=20161013133029",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/3/30/Type_Background_Steel.png/revision/latest/scale-to-width-down/150?cb=20171026003833"
     },
     {
         "name": "fire",
-        "url": "https://www.pokepedia.fr/images/d/d5/Miniature_Type_Feu_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/3/30/Fire.png/revision/latest/scale-to-width-down/64?cb=20161013132833",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/6/64/Type_Background_Fire.png/revision/latest/scale-to-width-down/150?cb=20171026003653"
     },
     {
         "name": "grass",
-        "url": "https://www.pokepedia.fr/images/2/2f/Miniature_Type_Plante_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png/revision/latest/scale-to-width-down/64?cb=20161013132855",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/9/92/Type_Background_Grass.png/revision/latest/scale-to-width-down/150?cb=20171026003722"
     },
     {
         "name": "ice",
-        "url": "https://www.pokepedia.fr/images/f/f3/Miniature_Type_Glace_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/7/77/Ice.png/revision/latest/scale-to-width-down/64?cb=20161013132908",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/8/85/Type_Background_Ice.png/revision/latest/scale-to-width-down/150?cb=20171026003739"
     },
     {
         "name": "poison",
-        "url": "https://www.pokepedia.fr/images/5/51/Miniature_Type_Poison_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/0/05/Poison.png/revision/latest/scale-to-width-down/64?cb=20161013133014",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/d/db/Type_Background_Poison.png/revision/latest/scale-to-width-down/150?cb=20171026003759"
     },
     {
         "name": "flying",
-        "url": "https://www.pokepedia.fr/images/a/ab/Miniature_Type_Vol_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/7/7f/Flying.png/revision/latest/scale-to-width-down/64?cb=20161013132839",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/6/65/Type_Background_Flying.png/revision/latest/scale-to-width-down/150?cb=20171026004151"
     },
     {
         "name": "bug",
-        "url": "https://www.pokepedia.fr/images/7/73/Miniature_Type_Insecte_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/7/7d/Bug.png/revision/latest/scale-to-width-down/64?cb=20161013132753",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/0/05/Type_Background_Bug.png/revision/latest/scale-to-width-down/150?cb=20171026003543"
     },
     {
         "name": "ghost",
-        "url": "https://www.pokepedia.fr/images/4/4a/Miniature_Type_Spectre_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/a/ab/Ghost.png/revision/latest/scale-to-width-down/64?cb=20161013132847",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/4/44/Type_Background_Ghost.png/revision/latest/scale-to-width-down/150?cb=20171026003713"
     },
     {
         "name": "dragon",
-        "url": "https://www.pokepedia.fr/images/b/bd/Miniature_Type_Dragon_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/c/c7/Dragon.png/revision/latest/scale-to-width-down/64?cb=20161013132807",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/2/28/Type_Background_Dragon.png/revision/latest/scale-to-width-down/150?cb=20171026003601"
     },
     {
         "name": "fairy",
-        "url": "https://www.pokepedia.fr/images/7/76/Miniature_Type_Fée_LGPE.png"
+        "url": "https://vignette.wikia.nocookie.net/pokemongo/images/4/43/Fairy.png/revision/latest/scale-to-width-down/64?cb=20161013132820",
+        "backgroundUrl": "https://vignette.wikia.nocookie.net/pokemongo/images/1/19/Type_Background_Fairy.png/revision/latest/scale-to-width-down/150?cb=20171026003635"
     }
 ]

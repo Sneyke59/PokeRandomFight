@@ -5,4 +5,5 @@ export interface TypeLink {
         url: string;
     };
     img: string;
+    imgBg: string;
 }

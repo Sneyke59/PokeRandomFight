@@ -5,4 +5,6 @@ export interface StatLink {
     };
     effort: number;
     baseStat: number;
+    iv: number;
+    valueWithIv: number;
 }

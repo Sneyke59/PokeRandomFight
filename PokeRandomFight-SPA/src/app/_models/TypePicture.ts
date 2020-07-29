@@ -3,4 +3,5 @@
 export interface TypePicture {
     name: string;
     url: string;
+    backgroundUrl: string;
 }

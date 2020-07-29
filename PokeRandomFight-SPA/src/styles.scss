@@ -2,10 +2,14 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
   // font-family: "Fira Code", monospace;
-  font-family: "Signika", sans-serif;
+  // font-family: "Signika", sans-serif;
+  // font-family: "MuseoModerno", cursive;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 h1 {

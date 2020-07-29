@@ -82,5 +82,20 @@ namespace PokeRandomFight.API.Controllers
 
             return Ok(natures.ToArray());
         }
+
+        [HttpGet("types")]
+        public async Task<IActionResult> GetTypes()
+        {
+            var types = new List<Type>();
+
+            for (int i = 1; i < 19; i++)
+            {
+                Type type = await _pokeClient.GetResourceAsync<Type>(i);
+
+                types.Add(type);
+            }
+
+            return Ok(types.ToArray());
+        }
     }
 }

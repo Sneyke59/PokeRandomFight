@@ -2,18 +2,28 @@
   <div class="row mt-4">
     <div class="col mb-4">
       <app-pokemon-card [pokemon]="pokemon" [palette]="palette" [specy]="specy" [statsDatas]="statsDatas"
-        [shapesDatas]="shapesDatas" [pokemonLoading]="pokemonLoading" [specyLoading]="specyLoading">
+        [shapesDatas]="shapesDatas" [pokemonLoading]="pokemonLoading" [specyLoading]="specyLoading"
+        [typesDatas]="typesData">
       </app-pokemon-card>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row bg_3">
     <div class="col">
       <button class="btn btn-primary" (click)="getRandom()">Get Random Pokemon</button>
     </div>
   </div>
 
 </div>
+<div class="toggle-wrapper">
+  <p>FR</p>
+  <div class="toggle normal">
+    <input id="normal" type="checkbox" (click)="onToggle()" />
+    <label class="toggle-item" for="normal"></label>
+  </div>
+  <p>EN</p>
+</div>
+
 
 <div class="spinner-border text-dark" role="status" *ngIf="naturesLoading">
   <span class="sr-only">Loading...</span>

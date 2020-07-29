@@ -6,9 +6,11 @@ import { MoveLink } from './MoveLink';
 import { SpecyLink } from './SpecyLink';
 import { StatLink } from './StatLink';
 import { TypeLink } from './TypeLink';
+import { Nature } from './Nature';
 
 export interface Pokemon {
     id: number;
+    level: number;
     name: string;
     baseExperience: string;
     height: number;
@@ -24,4 +26,5 @@ export interface Pokemon {
     species: SpecyLink;
     stats: StatLink[];
     types: TypeLink[];
+    nature: Nature;
 }

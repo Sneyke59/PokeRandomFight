@@ -1,7 +1,8 @@
 <div class="card">
   <div class="banner" [ngStyle]="{'background-color': palette?.Vibrant.hex}" style="--col:{{palette?.Vibrant.hex}}">
     <img src="{{pokemon?.sprites.frontDefault}}" class="current"
-      [ngStyle]="{'background-color': palette?.DarkVibrant.hex}" *ngIf="!pokemonLoading">
+      [ngStyle]="{'background-color': palette?.DarkVibrant.hex, 'background-image': 'url('+pokemon?.types[0].imgBg+')'}"
+      *ngIf="!pokemonLoading">
     <div class="loader d-flex justify-content-center align-items-center"
       [ngStyle]="{'background-color': palette?.Vibrant.hex}" *ngIf="pokemonLoading">
       <div class="spinner-border text-dark" role="status">
@@ -11,9 +12,10 @@
   </div>
   <div class="menu">
     <div class="id">
-      <p>#{{pokemon?.id}}</p>
+      <p [ngStyle]="{'color': palette?.Muted.hex}">#{{pokemon?.id}}</p>
     </div>
-    <div class="opener" tooltip="{{specy ? getShapeName() : ''}}">
+    <div class="opener" tooltip="{{(specy && shapesDatas) ? getShapeName() : ''}}"
+      style="--col:{{palette?.Vibrant.hex}}">
       <img *ngIf="!shapesLoading && !specyLoading" src="{{specy?.shape.imgUrl}}" alt=""
         style="width: 100%; height: 100%;">
       <div *ngIf="shapesLoading || specyLoading" class="spinner-border text-dark" role="status">
@@ -21,8 +23,9 @@
       </div>
     </div>
   </div>
+  <!-- NAME -->
   <h2 *ngIf="!specyLoading" class="name" [ngStyle]="{'color': palette?.Vibrant.hex}">
-    {{(specy ? getNameLang() +' ('+pokemon.id+')' : 'None') | titlecase}}</h2>
+    {{(specy ? getNameLang() + ' ('+pokemon?.level+')' : 'None') | titlecase}}</h2>
   <div *ngIf="specyLoading" class="gooey">
     <span class="dot" [ngStyle]="{'background-color': palette?.Vibrant.hex}"></span>
     <div class="dots">
@@ -31,52 +34,109 @@
       <span [ngStyle]="{'background-color': palette?.Vibrant.hex}"></span>
     </div>
   </div>
-  <div class="title">{{specy ? getGenera() : ''}}</div>
+  <!-- Pokemon tatata -->
+  <div class="title" [ngStyle]="{'color': palette?.DarkMuted.hex}">{{specy ? getGenera() : ''}}</div>
+  <!-- Nature -->
+  <div style="font-weight: 700;" [ngStyle]="{'color': palette?.Muted.hex}">{{pokemon ? getNatureLang():''}}</div>
+  <!-- Types -->
   <div class="d-flex align-items-center mb-2 mt-2" style="width: 100%; justify-content: space-evenly;">
-    <img *ngFor="let type of pokemon?.types" src="{{type.img}}" alt="">
+    <div class="type" *ngFor="let type of pokemon?.types; index as i">
+      <img src="{{type.img}}" alt="" style="width: 32px; height: 32px;">
+      <p [ngStyle]="{'color': typesDatas ? getColorForType(type.type.name) : '#fff'}" style="font-weight: 700;">
+        {{typesDatas ? getTypeLang(type.type.name) : ''}}</p>
+    </div>
   </div>
   <div class="actions">
     <div class="follow-info">
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[0].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[0].baseStat : pokemon.stats[0].valueWithIv : '0'}}</span>
           <small>{{statsDatas ? getStat(0) : ''}}</small>
         </a>
       </h2>
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[1].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[1].baseStat : pokemon.stats[1].valueWithIv : '0'}}
+          </span>
           <small>{{statsDatas ? getStat(1) : ''}}</small>
         </a>
       </h2>
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[2].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[2].baseStat : pokemon.stats[2].valueWithIv : '0'}}
+          </span>
           <small>{{statsDatas ? getStat(2) : ''}}</small>
         </a>
       </h2>
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[3].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[3].baseStat : pokemon.stats[3].valueWithIv : '0'}}
+          </span>
           <small>{{statsDatas ? getStat(3) : ''}}</small>
         </a>
       </h2>
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[4].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[4].baseStat : pokemon.stats[4].valueWithIv : '0'}}
+          </span>
           <small>{{statsDatas ? getStat(4) : ''}}</small>
         </a>
       </h2>
       <h2>
         <a>
-          <span [ngStyle]="{'color': palette?.DarkVibrant.hex}">{{pokemon ? pokemon.stats[5].baseStat : '0'}}</span>
+          <span [ngStyle]="{'color': showBaseStat ? palette?.Muted.hex : palette?.DarkVibrant.hex}"
+            [@switchStat]="switchStatState">
+            {{pokemon ? showBaseStat ? pokemon.stats[5].baseStat : pokemon.stats[5].valueWithIv : '0'}}
+          </span>
           <small>{{statsDatas ? getStat(5) : ''}}</small>
         </a>
       </h2>
     </div>
+    <div class="see-more">
+      <button type="button"
+        style="--col:{{palette ? getColorOpacity(palette.Vibrant) : 'white'}}; --col-hover:{{palette ? getColorOpacity(palette.DarkVibrant) : 'white'}}"
+        (click)="switchShownStats()">
+        <svg width="2rem" height="2rem" viewBox="0 0 2134 2134" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+          style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+          <path
+            d="M1066.67,739.071c367.618,0 666.078,190.025 666.078,327.596c0,137.57 -298.46,327.596 -666.078,327.596c-367.619,0 -666.079,-190.026 -666.079,-327.596c0,-137.571 298.46,-327.596 666.079,-327.596Z"
+            style="fill:none; stroke-width:104.17px;" [ngStyle]="{'stroke': '#fff'}" />
+          <circle cx="1066.67" cy="1066.67" r="136.581" style="fill:none;stroke-width:166.67px;"
+            [ngStyle]="{'stroke': '#fff'}" />
+          <path d="M768.195,445.282l177.318,-197.158l-197.158,-177.317"
+            style="fill:none;stroke-width:125px;stroke-linejoin:miter;stroke-miterlimit:10;"
+            [ngStyle]="{'stroke': '#fff'}" />
+          <path
+            d="M945.513,248.124c-413.147,44.039 -734.954,393.71 -734.954,818.543c0,454.651 368.567,823.218 823.218,823.218"
+            style="fill:none;stroke-width:125px;stroke-miterlimit:1;" [ngStyle]="{'stroke': '#fff'}" />
+          <path d="M1373.27,1688.05l-177.317,197.158l197.157,177.317"
+            style="fill:none;stroke-width:125px;stroke-linejoin:miter;stroke-miterlimit:10;"
+            [ngStyle]="{'stroke': '#fff'}" />
+          <path
+            d="M1195.95,1885.21c413.146,-44.039 734.954,-393.71 734.954,-818.542c0,-454.651 -368.568,-823.219 -823.219,-823.219"
+            style="fill:none;stroke-width:125px;" [ngStyle]="{'stroke': '#fff'}" />
+        </svg>
+        <p [@switchStat]="switchStatState" [ngStyle]="{'color': '#fff'}" style="font-weight: 700;">
+          {{showBaseStat ? 'Stats' : 'Base'}}
+        </p>
+      </button>
+    </div>
   </div>
   <div class="descContainer">
-    <div #desc class="desc" style="font-weight: 700;" [ngStyle]="{'color': '#fff'}">{{specy ? getFlavor() : ''}}</div>
+    <div #desc class="desc" style="font-weight: 700;" [ngStyle]="{'color': '#fff'}"
+      [@switchStat]="isLoading() ? 'hidden' : 'shown'">
+      {{specy ? getFlavor() : ''}}</div>
     <div class="bottomBanner"
       [ngStyle]="{'background-color': palette?.Vibrant.hex, 'height': isLoading() ? '700px' : getBottomHeight()}"
       style="--col:{{palette?.Vibrant.hex}}">
